@@ -11,8 +11,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({extended:false}));
 
 app.get('/', (req, res) => {
-    res.send("OMG it's working!");
+    // res.send("OMG it's working!");
+    res.sendFile('index.html');
 });
+
+const pdfRoute = require('./routes/pdfmake')
+app.use('/pdfMake', pdfRoute);
 
 app.listen(3000, () => {
     console.log('Server started on port 3000');
