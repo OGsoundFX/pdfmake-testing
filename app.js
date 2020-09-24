@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 
-// const port = 5000;
+const port = 5000;
 
 const app = express();
 
@@ -18,6 +18,9 @@ app.get('/', (req, res) => {
 const pdfRoute = require('./routes/pdfmake')
 app.use('/pdfMake', pdfRoute);
 
-app.listen(3000, () => {
-    console.log('Server started on port 3000');
+const testPage = require('./routes/testpage')
+app.use('/pdfMake', testPage);
+
+app.listen(port, () => {
+    console.log('Server started on port 5000');
 })
