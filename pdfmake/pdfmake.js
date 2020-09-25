@@ -1,4 +1,4 @@
-/*! pdfmake v0.1.37, @license MIT, @link http://pdfmake.org */
+/*! pdfmake v0.2.0-alpha.0, @license MIT, @link http://pdfmake.org */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
